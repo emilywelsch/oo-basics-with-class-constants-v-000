@@ -7,8 +7,8 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    # need something here so that brands are only counted when unique
-    BRANDS << brand.uniq
+    # need something here so that brands are only counted when unique, like .uniq
+    BRANDS << uniq.brand
   end
 
   def cobble
