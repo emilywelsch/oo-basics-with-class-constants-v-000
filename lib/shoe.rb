@@ -3,11 +3,13 @@ class Shoe
   attr_accessor :color, :size, :material, :condition
   attr_reader :brand
 
-  BRANDS = []
+  BRANDS = {}
+  brands = {}
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    BRANDS << brands
+    brands.uniq.each{|e| BRANDS[e]= brands.count(e)}
   end
 
   def cobble
